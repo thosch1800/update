@@ -1,3 +1,5 @@
+control update
+
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))  
 {  
   $arguments = "& '" +$myinvocation.mycommand.definition + "'"
@@ -5,6 +7,5 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
   Break
 }
 
-control update
 winget source update
 winget upgrade --all

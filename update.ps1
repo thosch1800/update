@@ -9,3 +9,6 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 winget source update
 winget upgrade --all
+
+#Write-Host "Press any key to continue..."
+#$host.ui.RawUI.ReadKey("NoEcho,IncludeKeyDown")
